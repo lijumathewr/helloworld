@@ -11,9 +11,11 @@ phases:
     commands:
 #      - apt-get update -y && apt-get install -y git
       - echo $CODEBUILD_WEBHOOK_TRIGGER
-      - git clone -b $BRANCH $GIT_REPO
+      - git clone $GIT_REPO
       - ls -l 
       - cd helloworld
       - ls -l
       - git tags
       - git status
+      - git checkout $BRANCH
+      - ls -l
