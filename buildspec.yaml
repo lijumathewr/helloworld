@@ -10,10 +10,9 @@ phases:
   install:
     commands:
 #      - apt-get update -y && apt-get install -y git
-      - echo $GIT_REPO && echo $BRANCH
-      - git clone -b dev https://github.com/lijumathewr/helloworld
+      - git clone -b ${BRANCH} ${GIT_REPO}
       - ls -l 
       - cd helloworld
       - ls -l
-      - git tags
+      - git tag
       - git status
