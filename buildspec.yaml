@@ -10,3 +10,6 @@ phases:
     commands:
       - apt-get update -y && apt-get install -y git
       - ls -l
+      - git status
+      - git branch
+      - git tags
