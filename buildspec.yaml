@@ -1,15 +1,13 @@
 version: 0.2
 
 variables:
-  BRANH_NAME: "dev"
   MAJOR_VERSION: "1"
   MINOR_VERSION: "0"
+  GIT_REPO: "https://github.com/lijumathewr/helloworld"
 
 phases:
   install:
     commands:
-      - apt-get update -y && apt-get install -y git
-      - ls -l
-      - git status
-      - git branch
-      - git tags
+#      - apt-get update -y && apt-get install -y git
+      - echo $CODEBUILD_SOURCE_VERSION
+      - echo $CODEBUILD_SOURCE_REPO_URL
