@@ -41,8 +41,11 @@ if [ "$major_max" -ne "${MAJOR_VERSION}" ] || [ "$minor_max" -ne "${MINOR_VERSIO
     minor_max="${MINOR_VERSION}"
 fi
 
+git config --global user.email "awscodepipeline@pge.com"
+git config --global user.name "AWS CodePipeline"
+
 echo 'Switching to new version:' $major_max'.'$minor_max'.'$patch_max
 $(git tag -a $branch_name-$major_max.$minor_max.$patch_max $branch_name -m "Version $major_max.$minor_max.$patch_max")
 echo 'Push tag to remote'
-$(git push origin $branch_name-$major_max.$minor_max.$patch_max $branch_name)
+$(git push origin $branch_name --tags $branch_name-$major_max.$minor_max.$patch_max $branch_name)
 exit 0
