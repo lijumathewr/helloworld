@@ -9,10 +9,14 @@ variables:
 phases:
   install:
     commands:
+      - export MAJOR_VERSION="1"
+      - export MINOR_VERSION="0"
+      - export BRANCH_NAME="dev"
+      - echo $BRANCH_NAME
       - git clone -b dev https://github.com/lijumathewr/helloworld
       - cd helloworld
       - ls -l
       - git tag
       - git status
       - chmod 755 git_tagging.sh
-      - bash git_tagging.sh
+      - ./git_tagging.sh
