@@ -4,13 +4,16 @@ variables:
   MAJOR_VERSION: "1"
   MINOR_VERSION: "0"
   GIT_REPO: "https://github.com/lijumathewr/helloworld"
+  BRANCH: "dev"
 
 phases:
   install:
     commands:
 #      - apt-get update -y && apt-get install -y git
       - echo $CODEBUILD_WEBHOOK_TRIGGER
-      - git clone -b $CODEBUILD_WEBHOOK_TRIGGER $GIT_REPO
+      - git clone -b $BRANCH $GIT_REPO
       - ls -l 
       - cd helloworld
       - ls -l
+      - git tags
+      - git status
