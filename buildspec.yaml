@@ -1,0 +1,12 @@
+version: 0.2
+
+variables:
+  BRANH_NAME: "dev"
+  MAJOR_VERSION: "1"
+  MINOR_VERSION: "0"
+
+phases:
+  install:
+    commands:
+      - apt-get update -y && apt-get install -y git
+      - ls -l
