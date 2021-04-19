@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xe
+
 major_max=1;
 minor_max=0;
 patch_max=0;
