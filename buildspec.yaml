@@ -4,7 +4,7 @@ variables:
   MAJOR_VERSION: "1"
   MINOR_VERSION: "0"
   GIT_REPO: "https://github.com/lijumathewr/helloworld"
-  BRANCH: "dev"
+  BRANCH_NAME: "dev"
 
 phases:
   install:
