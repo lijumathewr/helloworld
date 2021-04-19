@@ -9,9 +9,7 @@ variables:
 phases:
   install:
     commands:
-#      - apt-get update -y && apt-get install -y git
-      - git clone -b ${BRANCH} ${GIT_REPO}
-      - ls -l 
+      - git clone -b dev https://github.com/lijumathewr/helloworld
       - cd helloworld
       - ls -l
       - git tag
