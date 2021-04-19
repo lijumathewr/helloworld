@@ -10,12 +10,10 @@ phases:
   install:
     commands:
 #      - apt-get update -y && apt-get install -y git
-      - echo $CODEBUILD_WEBHOOK_TRIGGER
-      - git clone $GIT_REPO
+      - echo $GIT_REPO && echo $BRANCH
+      - git clone -b dev https://github.com/lijumathewr/helloworld
       - ls -l 
       - cd helloworld
       - ls -l
       - git tags
       - git status
-      - git checkout $BRANCH
-      - ls -l
